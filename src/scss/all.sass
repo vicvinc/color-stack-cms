@@ -1,7 +1,6 @@
 @charset "utf-8";
 @import "~bulma/bulma";
 
-
 $black:        hsl(0, 0%, 4%) !default
 $black-bis:    hsl(0, 0%, 7%) !default
 $black-ter:    hsl(0, 0%, 14%) !default
@@ -37,6 +36,9 @@ $black: #b1b1bd
 
 .navbar .navbar-menu
   box-shadow:none !important
+
+.navbar-item img
+  max-height: unset
 
 .content .taglist
   list-style: none
@@ -98,7 +100,6 @@ $black: #b1b1bd
 
 .navbar-item .icon
   color: $primary
-// Override for use of svg's from https://simpleicons.org/
 .icon svg
   width: 1.5rem
   height: 1.5rem

@@ -244,7 +244,7 @@ collections:
     create: true
     identifier_field: name
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    fileds:
+    fields:
       - {
           label: "Template Key",
           name: "templateKey",
