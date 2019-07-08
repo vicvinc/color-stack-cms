@@ -1,6 +1,7 @@
 backend:
   name: github
-  branch: vicvinc/color-stack-cms
+  repo: vicvinc/color-stack-cms
+  branch: master
 
 media_folder: static/img
 public_folder: /img
