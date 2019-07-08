@@ -1,0 +1,167 @@
+.color-container {
+    margin: 0 -8px;
+}
+
+.color-box {
+    padding: 0 8px;
+}
+
+.color-panel {
+    position: relative;
+    width: 100%;
+    height: 40px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    transition: all ease 0.3s;
+    cursor: pointer;
+
+    &::before {
+        content: 'Copied!';
+        background-color: $light-green;
+        color: $teal;
+        text-transform: uppercase;
+        font-size: 10px;
+        padding: 2px 4px;
+        border-radius: 2px;
+        letter-spacing: 0.5px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin-bottom: -7px;
+        text-align: center;
+        opacity: 0;
+        transition: all ease 0.3s;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        width: 14px;
+        height: 16px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: all ease 0.3s;
+        opacity: 0;
+        background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI1NnB4IiBoZWlnaHQ9IjY0cHgiIHZpZXdCb3g9IjAgMCA1NiA2NCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4gICAgICAgIDx0aXRsZT5jb3B5PC90aXRsZT4gICAgPGRlc2M+Q3JlYXRlZCB3aXRoIFNrZXRjaC48L2Rlc2M+ICAgIDxkZWZzPjwvZGVmcz4gICAgPGcgaWQ9IlBhZ2UtMSIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+ICAgICAgICA8ZyBpZD0iY29weSIgZmlsbD0iI0ZGRkZGRiIgZmlsbC1ydWxlPSJub256ZXJvIj4gICAgICAgICAgICA8cGF0aCBkPSJNNTMuNDAxMjIxNiw4LjExNDc2NjY1IEw0Ny4wMTY1Njk5LDEuNzMwMTE0ODcgQzQ1LjkwODgxMjEsMC42MjIzNDg5MzEgNDQuNDA2MzY3Niw4LjE5MTg4MTc0ZS0wNiA0Mi44Mzk3NTU4LC0xLjA2NTgxNDFlLTE0IEwyMS42NTg3MzkzLC0xLjA2NTgxNDFlLTE0IEMxOC4zOTYzOTE3LC0xLjA2NTgxNDFlLTE0IDE1Ljc1MTgxMDQsMi42NDQ1ODEzIDE1Ljc1MTgxMDQsNS45MDY5Mjg5MSBMMTUuNzUxODEwNCwxMS44MTM4NTc4IEw1LjkwNjkyODkxLDExLjgxMzg1NzggQzIuNjQ0NTgxMywxMS44MTM4NTc4IDAsMTQuNDU4NDM5MSAwLDE3LjcyMDc4NjcgTDAsNTcuMTAwMzEyOCBDMCw2MC4zNjI2NjA0IDIuNjQ0NTgxMyw2My4wMDcyNDE3IDUuOTA2OTI4OTEsNjMuMDA3MjQxNyBMMzMuNDcyNTk3Miw2My4wMDcyNDE3IEMzNi43MzQ5NDQ4LDYzLjAwNzI0MTcgMzkuMzc5NTI2MSw2MC4zNjI2NjA0IDM5LjM3OTUyNjEsNTcuMTAwMzEyOCBMMzkuMzc5NTI2MSw1MS4xOTMzODM5IEw0OS4yMjQ0MDc2LDUxLjE5MzM4MzkgQzUyLjQ4Njc1NTIsNTEuMTkzMzgzOSA1NS4xMzEzMzY1LDQ4LjU0ODgwMjYgNTUuMTMxMzM2NSw0NS4yODY0NTUgTDU1LjEzMTMzNjUsMTIuMjkxNTgwNyBDNTUuMTMxMzI4MywxMC43MjQ5Njg5IDU0LjUwODk4NzYsOS4yMjI1MjQ0IDUzLjQwMTIyMTYsOC4xMTQ3NjY2NSBaIE00My4zMTc0Nzg3LDMuOTk4Mzc1NTcgQzQzLjY2MzY5MjQsNC4wODM3OTg3MSA0My45Nzk5MzMxLDQuMjYyMzI1MTIgNDQuMjMxOTQ1MSw0LjUxNDYxNjU0IEw1MC42MTY1OTY5LDEwLjg5OTM5MTQgQzUwLjg2ODg2MzIsMTEuMTUxNDIyNiA1MS4wNDczODU0LDExLjQ2NzY1NTggNTEuMTMyODM3OSwxMS44MTM4NTc4IEw0My4zMTc0Nzg3LDExLjgxMzg1NzggTDQzLjMxNzQ3ODcsMy45OTgzNzU1NyBaIE0zNS40NDE1NzM1LDU3LjEwMDMxMjggQzM1LjQ0MTU3MzUsNTguMTg1OTU3MSAzNC41NTgyNDE1LDU5LjA2OTI4OTEgMzMuNDcyNTk3Miw1OS4wNjkyODkxIEw1LjkwNjkyODkxLDU5LjA2OTI4OTEgQzQuODIxMjg0Niw1OS4wNjkyODkxIDMuOTM3OTUyNjEsNTguMTg1OTU3MSAzLjkzNzk1MjYxLDU3LjEwMDMxMjggTDMuOTM3OTUyNjEsMTcuNzIwNzg2NyBDMy45Mzc5NTI2MSwxNi42MzUxNDI0IDQuODIxMjg0NiwxNS43NTE4MTA0IDUuOTA2OTI4OTEsMTUuNzUxODEwNCBMMTUuNzUxODEwNCwxNS43NTE4MTA0IEwxNS43NTE4MTA0LDQ1LjI4NjQ1NSBDMTUuNzUxODEwNCw0OC41NDg4MDI2IDE4LjM5NjM5MTcsNTEuMTkzMzgzOSAyMS42NTg3MzkzLDUxLjE5MzM4MzkgTDM1LjQ0MTU3MzUsNTEuMTkzMzgzOSBMMzUuNDQxNTczNSw1Ny4xMDAzMTI4IFogTTUxLjE5MzM4MzksNDUuMjg2NDU1IEM1MS4xOTMzODM5LDQ2LjM3MjA5OTMgNTAuMzEwMDUxOSw0Ny4yNTU0MzEzIDQ5LjIyNDQwNzYsNDcuMjU1NDMxMyBMMjEuNjU4NzM5Myw0Ny4yNTU0MzEzIEMyMC41NzMwOTUsNDcuMjU1NDMxMyAxOS42ODk3NjMsNDYuMzcyMDk5MyAxOS42ODk3NjMsNDUuMjg2NDU1IEwxOS42ODk3NjMsNS45MDY5Mjg5MSBDMTkuNjg5NzYzLDQuODIxMjg0NiAyMC41NzMwOTUsMy45Mzc5NTI2MSAyMS42NTg3MzkzLDMuOTM3OTUyNjEgTDM5LjM3OTUyNjEsMy45Mzc5NTI2MSBMMzkuMzc5NTI2MSwxMi43OTgzNDYgQzM5LjM3OTUyNjEsMTQuNDIyNzUxNCA0MC43MDg1ODUxLDE1Ljc1MTgxMDQgNDIuMzMyOTkwNSwxNS43NTE4MTA0IEw1MS4xOTMzODM5LDE1Ljc1MTgxMDQgTDUxLjE5MzM4MzksNDUuMjg2NDU1IFoiIGlkPSJTaGFwZSI+PC9wYXRoPiAgICAgICAgPC9nPiAgICA8L2c+PC9zdmc+);
+        background-size: cover;
+        color: $teal;
+    }
+
+    &:hover {
+        box-shadow: 0 2px 2px rgba(0, 0, 0, .2);
+        transform: scale(1.1);
+    }
+
+    &:hover::after {
+        opacity: 0.3;
+    }
+
+    &.is-copied {
+        &::before {
+            opacity: 0.7;
+        }
+
+        &::after {
+            opacity: 0;
+        }
+    }
+
+}
+
+
+.color-hex-val {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #f9f9f9;
+    border-radius: 0 4px 0 0;
+    padding: 0 4px;
+    color: $black;
+    font-size: 12px;
+}
+
+.color-times {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: #f9f9f9;
+    border-radius: 0 0 4px 0;
+    padding: 0 4px;
+    color: $gray-800;
+    font-size: 10px;
+}
+
+.header-tips {
+    font-size: 12px;
+    color: $gray-800;
+    margin-bottom: 16px;
+}
+
+.spinner-item {
+    position: relative;
+    width: 100px;
+    height: 4px;
+    background-color: $teal;
+    background-clip: padding-box;
+    overflow: hidden;
+}
+
+.spinner-item .sp-1 {
+    position: absolute;
+    height: 4px;
+    background-color: $light-green;
+    background-clip: padding-box;
+    display: block;
+    will-change: left, right;
+    overflow: hidden;
+    border-radius: 2px;
+    animation: 2.1s cubic-bezier(0.65, 0.815, 0.735, 0.395) 0s infinite normal none running animation-1t856st;
+}
+
+.spinner-item .sp-2 {
+    position: absolute;
+    height: 4px;
+    background-color: $light-green;
+    background-clip: padding-box;
+    display: block;
+    will-change: left, right;
+    overflow: hidden;
+    border-radius: 2px;
+    animation: 2.1s cubic-bezier(0.165, 0.84, 0.44, 1) 1.15s infinite normal none running animation-vd8ht;
+}
+
+@keyframes animation-1t856st {
+    0% {
+        left: -35%;
+        right: 100%;
+    }
+
+    60% {
+        left: 100%;
+        right: -90%;
+    }
+
+    100% {
+        left: 100%;
+        right: -90%;
+    }
+}
+
+@keyframes animation-vd8ht {
+    0% {
+        left: -200%;
+        right: 100%;
+    }
+
+    60% {
+        left: 107%;
+        right: -8%;
+    }
+
+    100% {
+        left: 107%;
+        right: -8%;
+    }
+}
