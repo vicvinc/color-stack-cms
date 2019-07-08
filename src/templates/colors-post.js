@@ -45,15 +45,15 @@ export const ColorsPostTemplate = ({
               {colors && colors.length
                 ? colors.map((item, idx) => {
                     return (
-                      <div class="col-4 color-box" key={idx}>
+                      <div className="col-4 color-box" key={idx}>
                         <div
-                          class="color-panel"
+                          className="color-panel"
                           style={{
                             background: `#${item.hex}`
                           }}
                         >
-                          <span class="color-hex-val">{item.hex}</span>
-                          <span class="color-times text-right">
+                          <span className="color-hex-val">{item.hex}</span>
+                          <span className="color-times text-right">
                             {item.count}
                           </span>
                         </div>
