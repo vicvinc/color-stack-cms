@@ -1,14 +1,39 @@
-@import "~bulma"
+@charset "utf-8";
+@import "~bulma/bulma";
+
+
+$black:        hsl(0, 0%, 4%) !default
+$black-bis:    hsl(0, 0%, 7%) !default
+$black-ter:    hsl(0, 0%, 14%) !default
+
+$grey-darker:  hsl(0, 0%, 21%) !default
+$grey-dark:    hsl(0, 0%, 29%) !default
+$grey:         hsl(0, 0%, 48%) !default
+$grey-light:   hsl(0, 0%, 71%) !default
+$grey-lighter: hsl(0, 0%, 86%) !default
+
+$white-ter:    hsl(0, 0%, 96%) !default
+$white-bis:    hsl(0, 0%, 98%) !default
+$white:        hsl(0, 0%, 100%) !default
+
+$orange:       #fd7e14 !default
+$yellow:       hsl(48,  100%, 67%) !default
+$green:        #28a745 !default
+$turquoise:    $red !default
+$cyan:         #00afaa !default
+$blue:         hsl(217, 71%,  53%) !default
+$purple:       hsl(271, 100%, 71%) !default
+$red:          #ff5e5e !default
 
 // Config vars
 // Kaldi logo brand color: #FD461E
-$kaldi-red: #D64000
-$kaldi-red-invert: #fff
+$kaldi-red: #ff5e5e
+$kaldi-red-invert: #f1f2fc
 
 $primary: $kaldi-red
 $primary-invert: $kaldi-red-invert
-$body-color: #333
-$black: #2b2523
+$body-color: #222
+$black: #b1b1bd
 
 .navbar .navbar-menu
   box-shadow:none !important
@@ -81,8 +106,7 @@ $black: #2b2523
 .navbar-brand .navbar-item.logo
   padding: 0 1rem
 footer.footer
-  padding: 3rem 0rem 0rem
-  background-color: transparent
+  padding: 1em 0rem 0rem
 
 //Menu overrides
 $menu-item-color: $white-ter
@@ -121,8 +145,7 @@ $menu-label-color: $white-ter
 .blog-list-item .featured-thumbnail
   flex-basis: 35%;
   margin: 0 1.5em 0 0;
-.columns.is-multiline
-  flex: 1;
+
 
 // responsiveness
 +tablet-only

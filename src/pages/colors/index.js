@@ -17,7 +17,8 @@ class ColorsIndexPage extends React.Component {
           style={{
             backgroundImage: `url('/img/blog-index.jpg')`
           }}
-        >
+        ></div>
+        <div className="container content p-4">
           <div className="columns is-multiline">
             {posts &&
               posts.map(({ node: post }) => (

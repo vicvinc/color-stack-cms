@@ -1,3 +1,15 @@
 * {
     box-sizing: border-box;
 }
+
+.has-background-blue {
+    background: $light-blue;
+}
+
+.has-background-red {
+    background: $light-red;
+}
+
+.has-background-green {
+    background: $light-green;
+}

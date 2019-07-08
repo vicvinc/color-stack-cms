@@ -26,11 +26,8 @@ export const ColorsPostTemplate = ({
             <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
               {title}
             </h1>
-            <p>{description}</p>
-            <PostContent content={content} />
             {tags && tags.length ? (
               <div style={{ marginTop: `4rem` }}>
-                <h4>Tags</h4>
                 <ul className="taglist">
                   {tags.map(tag => (
                     <li key={tag + `tag`}>
@@ -40,23 +37,29 @@ export const ColorsPostTemplate = ({
                 </ul>
               </div>
             ) : null}
-            {colors && colors.length
-              ? colors.map((item, idx) => {
-                  return (
-                    <div class="col-4 color-box" key={idx}>
-                      <div
-                        class="color-panel"
-                        style={{
-                          background: `#${item.hex}`
-                        }}
-                      >
-                        <span class="color-hex-val">{item.hex}</span>
-                        <span class="color-times text-right">{item.count}</span>
+            <p>{description}</p>
+            <PostContent content={content} />
+            <div className="container-fluid row mt-4">
+              {colors && colors.length
+                ? colors.map((item, idx) => {
+                    return (
+                      <div class="col-4 color-box" key={idx}>
+                        <div
+                          class="color-panel"
+                          style={{
+                            background: `#${item.hex}`
+                          }}
+                        >
+                          <span class="color-hex-val">{item.hex}</span>
+                          <span class="color-times text-right">
+                            {item.count}
+                          </span>
+                        </div>
                       </div>
-                    </div>
-                  );
-                })
-              : null}
+                    );
+                  })
+                : null}
+            </div>
           </div>
         </div>
       </div>
