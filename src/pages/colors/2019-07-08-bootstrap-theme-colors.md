@@ -314,4 +314,6 @@ colors:
   ]
 ---
 
+![chemex](/img/bootstrap-theme-color.jpg)
+
 bootstrap ui kit theme colors.
