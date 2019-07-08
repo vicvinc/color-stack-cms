@@ -1,6 +1,6 @@
 backend:
-  name: git-gateway
-  branch: master
+  name: github
+  branch: vicvinc/color-stack-cms
 
 media_folder: static/img
 public_folder: /img
@@ -258,4 +258,4 @@ collections:
       - { label: "Featured Image", name: "featuredimage", widget: image }
       - { label: "Body", name: "body", widget: "markdown" }
       - { label: "Tags", name: "tags", widget: "list" }
-      - { label: "Colors", name: "colors", widget: "list" }
+      - { label: "Colors", name: "colors", widget: "list", default: [] }
