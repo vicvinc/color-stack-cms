@@ -26,18 +26,20 @@ export const ColorsPostTemplate = ({
             <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
               {title}
             </h1>
+            <p>{description}</p>
             {tags && tags.length ? (
-              <div style={{ marginTop: `4rem` }}>
-                <ul className="taglist">
-                  {tags.map(tag => (
-                    <li key={tag + `tag`}>
-                      <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
-                    </li>
-                  ))}
-                </ul>
+              <div className="tags">
+                {tags.map(tag => (
+                  <Link
+                    key={tag + `tag`}
+                    className="tag is-link"
+                    to={`/tags/${kebabCase(tag)}/`}
+                  >
+                    {tag}
+                  </Link>
+                ))}
               </div>
             ) : null}
-            <p>{description}</p>
             <PostContent content={content} />
             <div className="container-fluid row mt-4">
               {colors && colors.length
